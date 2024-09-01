@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dptos', function (Blueprint $table) {
+        Schema::create('facturas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre',255);
-            $table->integer('tmax');
+            $table->string('prefijo',255);
+            $table->string('numero_factura',255);
+            $table->unsignedBigInteger('tipo_factura_id');
+
+            $table->foreign('tipo_factura_id')->references('id')->on('tipos_facturas');
+            $table->timestamps();
         });
     }
 
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dptos');
+        Schema::dropIfExists('facturas');
     }
 };

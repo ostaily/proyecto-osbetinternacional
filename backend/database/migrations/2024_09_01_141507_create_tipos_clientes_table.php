@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cargos', function (Blueprint $table) {
+        Schema::create('tipos_clientes', function (Blueprint $table) {
             $table->id();
-            // $table->integer('id_area')->unsigned();
-            $table->string('nombre',80);
-            $table->unsignedBigInteger('id_area');
-            $table->foreign('id_area')->references('id')->on('areas');
-           
-            
+            $table->string('nombre',20);
+            $table->timestamps();
         });
     }
 
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cargos');
+        Schema::dropIfExists('tipos_clientes');
     }
 };

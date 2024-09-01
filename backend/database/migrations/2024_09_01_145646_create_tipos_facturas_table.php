@@ -11,17 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mpios', function (Blueprint $table) {
+        Schema::create('tipos_facturas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre',255);
-            $table->integer('estado');
-            $table->integer('tmax');
-            $table->char('danem', 4);
-
-            //llave foranea con dptos
-            $table->unsignedBigInteger('id_dpto');
-            $table->foreign('id_dpto')->references('id')->on('dptos');
-
+            $table->timestamps();
         });
     }
 
@@ -30,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mpios');
+        Schema::dropIfExists('tipos_facturas');
     }
 };
