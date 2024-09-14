@@ -9,4 +9,7 @@ class contactos extends Model
 {
     use HasFactory;
     protected $table = 'contactos';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 }

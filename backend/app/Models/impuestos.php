@@ -9,4 +9,7 @@ class impuestos extends Model
 {
     use HasFactory;
     protected $table = 'impuestos';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 }

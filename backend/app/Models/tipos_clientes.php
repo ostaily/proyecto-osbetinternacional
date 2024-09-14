@@ -9,4 +9,8 @@ class tipos_clientes extends Model
 {
     use HasFactory;
     protected $table = 'tipos_clientes';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
 }

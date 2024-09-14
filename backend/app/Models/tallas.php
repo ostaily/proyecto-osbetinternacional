@@ -9,4 +9,8 @@ class tallas extends Model
 {
     use HasFactory;
     protected $table = 'tallas';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
 }
