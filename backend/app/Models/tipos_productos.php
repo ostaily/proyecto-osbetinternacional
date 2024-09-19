@@ -9,4 +9,8 @@ class tipos_productos extends Model
 {
     use HasFactory;
     protected $table = 'tipos_productos';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
 }

@@ -9,4 +9,7 @@ class facturas extends Model
 {
     use HasFactory;
     protected $table = 'facturas';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 }

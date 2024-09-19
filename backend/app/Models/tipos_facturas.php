@@ -9,4 +9,8 @@ class tipos_facturas extends Model
 {
     use HasFactory;
     protected $table = 'tipos_facturas';
+    protected $fillable = ["*"];
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+
 }
